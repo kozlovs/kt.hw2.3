@@ -4,17 +4,17 @@ fun main() {
 
     println("Сумма покупки составляет: ${sumToString(sum)} →")
     val standartSale = 100_00
-    val saleOver1000 = 0.05
-    val saleForRegular = 0.01
+    val discountOver1000 = 0.05
+    val discountForRegular = 0.01
     if (sum > 10_000_00) {
-        sum -= (sum * saleOver1000).toInt()
+        sum -= (sum * discountOver1000).toInt()
         println("после применения 5% скидки - ${sumToString(sum)}")
     } else if (sum > 1_000_00) {
         sum -= standartSale
         println("после применения скидки 100 рублей - ${sumToString(sum)}")
     }
     if (buyer.regular) {
-        sum -= (sum * saleForRegular).toInt()
+        sum -= (sum * discountForRegular).toInt()
         println("после применения 1% скидки - ${sumToString(sum)}")
     }
 }
